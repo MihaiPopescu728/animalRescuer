@@ -39,7 +39,7 @@ public class App
                 "radu@none.com");
         System.out.println(person1);
 
-        PlayToy toy = new PlayToy("UFO", "Park", "Everyday", "Evening",
+        PlayToy toy = new PlayToy("Frisbee", "Park", "Everyday", "Evening",
                 "Mihai", 10, 3);
     }
 }
