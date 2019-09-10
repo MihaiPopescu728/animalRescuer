@@ -1,10 +1,10 @@
 package org.fasttrackit;
 
-public class Frisbee extends RecreationalActivity {
+public class PlayToy extends RecreationalActivity {
     int durability;
     int fatigueLevel;
 
-    public Frisbee(String name, String place, String dayOfWeek, String timeOfDay, String personName,
+    public PlayToy(String name, String place, String dayOfWeek, String timeOfDay, String personName,
                    int durability, int fatigueLevel) {
         super(name, place, dayOfWeek, timeOfDay, personName);
         this.durability = durability;
