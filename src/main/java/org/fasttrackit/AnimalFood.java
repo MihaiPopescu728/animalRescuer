@@ -3,15 +3,51 @@ package org.fasttrackit;
 import java.time.LocalDate;
 
 public class AnimalFood {
-    String name;
-    double price;
-    double quantity;
-    public LocalDate expirationDate;
-    boolean availability;
-    String flavour;
-    String shape;
-    int dosage;
-    String lotNumber;
+    protected String name;
+    protected double price;
+    protected double quantity;
+    protected LocalDate expirationDate;
+    protected boolean availability;
+    protected String flavour;
+    protected String shape;
+    protected int dosage;
+    protected String lotNumber;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public void setAvailability(boolean availability) {
+        this.availability = availability;
+    }
+
+    public void setFlavour(String flavour) {
+        this.flavour = flavour;
+    }
+
+    public void setShape(String shape) {
+        this.shape = shape;
+    }
+
+    public void setDosage(int dosage) {
+        this.dosage = dosage;
+    }
+
+    public void setLotNumber(String lotNumber) {
+        this.lotNumber = lotNumber;
+    }
 
     @Override
     public String toString() {
