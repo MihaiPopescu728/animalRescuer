@@ -1,8 +1,16 @@
 package org.fasttrackit;
 
 public class PersonTakingCare extends Adopter {
-    int availability;
-    String email;
+    protected int availability;
+    protected String email;
+
+    public void setAvailability(int availability) {
+        this.availability = availability;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public String toString() {

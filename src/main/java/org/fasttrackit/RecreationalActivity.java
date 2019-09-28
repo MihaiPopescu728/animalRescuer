@@ -1,11 +1,11 @@
 package org.fasttrackit;
 
 public class RecreationalActivity {
-    String name;
-    String place;
-    String dayOfWeek;
-    String timeOfDay;
-    String personName;
+    protected String name;
+    protected String place;
+    protected String dayOfWeek;
+    protected String timeOfDay;
+    protected String personName;
 
     @Override
     public String toString() {

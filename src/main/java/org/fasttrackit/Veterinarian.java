@@ -1,12 +1,36 @@
 package org.fasttrackit;
 
 public class Veterinarian {
-    String name;
-    String specialization;
-    String priceLevel;
-    String adress;
-    String phoneNumber;
-    String rating;
+    protected String name;
+    protected String specialization;
+    protected String priceLevel;
+    protected String adress;
+    protected String phoneNumber;
+    protected String rating;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
+    public void setPriceLevel(String priceLevel) {
+        this.priceLevel = priceLevel;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
 
     @Override
     public String toString() {

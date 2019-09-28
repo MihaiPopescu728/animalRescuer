@@ -41,5 +41,22 @@ public class App
 
         PlayToy toy = new PlayToy("Frisbee", "Park", "Everyday", "Evening",
                 "Mihai", 10, 3);
+
+
+     System.out.println("---------------------------------------------------------------");
+     System.out.println("Before feeding :");
+     System.out.println(animal1);
+     adopter.feed(animal1, animalFood1);
+     adopter.feed(animal1, animalFood1);
+     System.out.println("After feeding: ");
+     System.out.println(animal1);
+
+     System.out.println("---------------------------------------------------------------");
+     adopter.doRecreationActivity(animal1, activity1);
+     System.out.println(animal1);
+
+
+
+
     }
 }

@@ -2,8 +2,8 @@ package org.fasttrackit;
 
 public class Dog extends Animal{
 
-    String race;
-    int friendlinessLevel;
+    protected String race;
+    protected int friendlinessLevel;
 
     public Dog(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
                RecreationalActivity favoriteActivity, String idChip,
@@ -11,6 +11,14 @@ public class Dog extends Animal{
         super(name, age, healthLevel, hungerLevel, spiritLevel, favoriteFood, favoriteActivity, idChip, favoriteToy,
                 countryOfOrigin, species);
         this.race = race;
+        this.friendlinessLevel = friendlinessLevel;
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public void setFriendlinessLevel(int friendlinessLevel) {
         this.friendlinessLevel = friendlinessLevel;
     }
 

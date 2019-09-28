@@ -1,12 +1,36 @@
 package org.fasttrackit;
 
 public class Adopter {
-    String name;
-    double moneySum;
-    String personalNumericCode;
-    String phoneNumber;
-    String adress;
-    int yearOfBirth;
+    protected String name;
+    protected double moneySum;
+    protected String personalNumericCode;
+    protected String phoneNumber;
+    protected String adress;
+    protected int yearOfBirth;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMoneySum(double moneySum) {
+        this.moneySum = moneySum;
+    }
+
+    public void setPersonalNumericCode(String personalNumericCode) {
+        this.personalNumericCode = personalNumericCode;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
 
     @Override
     public String toString() {
@@ -18,6 +42,18 @@ public class Adopter {
                 ", adress='" + adress + '\'' +
                 ", yearOfBirth=" + yearOfBirth +
                 '}';
+    }
+
+    public void feed(Animal animal, AnimalFood food){
+        System.out.println(this.name+ " just gave some " + food.name +" to " + animal.name);
+        animal.decreaseHungerLevel();
+
+    }
+
+    public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity){
+        System.out.println(this.name + "  " + recreationalActivity.name + " " + animal.name);
+        animal.increaseSpiritLevel();
+
     }
 
 

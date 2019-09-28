@@ -2,17 +2,60 @@ package org.fasttrackit;
 
 public class Animal {
        String name;
-       int age;
-       int healthLevel;
-       int hungerLevel;
-       int spiritLevel;
-       AnimalFood favoriteFood;
-       RecreationalActivity favoriteActivity;
-       String idChip;
-       String favoriteToy;
-       String countryOfOrigin;
-       String species;
+       protected int age;
+       protected int healthLevel;
+       protected int hungerLevel;
+       protected int spiritLevel;
+       protected AnimalFood favoriteFood;
+       protected RecreationalActivity favoriteActivity;
+       protected String idChip;
+       protected String favoriteToy;
+       protected String countryOfOrigin;
+       protected String species;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setHealthLevel(int healthLevel) {
+        this.healthLevel = healthLevel;
+    }
+
+    public void setHungerLevel(int hungerLevel) {
+        this.hungerLevel = hungerLevel;
+    }
+
+    public void setSpiritLevel(int spiritLevel) {
+        this.spiritLevel = spiritLevel;
+    }
+
+    public void setFavoriteFood(AnimalFood favoriteFood) {
+        this.favoriteFood = favoriteFood;
+    }
+
+    public void setFavoriteActivity(RecreationalActivity favoriteActivity) {
+        this.favoriteActivity = favoriteActivity;
+    }
+
+    public void setIdChip(String idChip) {
+        this.idChip = idChip;
+    }
+
+    public void setFavoriteToy(String favoriteToy) {
+        this.favoriteToy = favoriteToy;
+    }
+
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
 
     @Override
     public String toString() {
@@ -29,6 +72,13 @@ public class Animal {
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 ", species='" + species + '\'' +
                 '}';
+    }
+    public void decreaseHungerLevel(){
+        this.hungerLevel--;
+    }
+
+    public void increaseSpiritLevel(){
+        this.spiritLevel++;
     }
 
     public Animal(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
