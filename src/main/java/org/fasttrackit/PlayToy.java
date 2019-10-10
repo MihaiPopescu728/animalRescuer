@@ -10,6 +10,7 @@ public class PlayToy extends RecreationalActivity {
         this.durability = durability;
         this.fatigueLevel = fatigueLevel;
     }
+
     @Override
     public String toString() {
         return "Frisbee{" +

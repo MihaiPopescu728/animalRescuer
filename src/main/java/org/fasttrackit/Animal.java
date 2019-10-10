@@ -13,6 +13,9 @@ public class Animal {
        protected String countryOfOrigin;
        protected String species;
 
+    public Animal(){
+
+    }
 
     public Animal(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
                   RecreationalActivity favoriteActivity, String idChip, String favoriteToy, String countryOfOrigin,
@@ -45,6 +48,10 @@ public class Animal {
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 ", species='" + species + '\'' +
                 '}';
+    }
+
+    public void showHappiness (){
+        System.out.println("The animal is happy!");
     }
 
     public void setName(String name) {

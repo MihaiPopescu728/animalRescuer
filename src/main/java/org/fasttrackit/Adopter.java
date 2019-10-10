@@ -17,6 +17,7 @@ public class Adopter {
         this.adress = adress;
         this.yearOfBirth = yearOfBirth;
     }
+
     @Override
     public String toString() {
         return "Adopter{" +
@@ -77,13 +78,14 @@ public class Adopter {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public void feed(Animal animal, AnimalFood food){
-        System.out.println(this.name+ " just gave some " + food.name +" to " + animal.name);
+    public void feed(Animal animal, AnimalFood food) {
+        System.out.println(this.name + " just gave some " + food.name + " to " + animal.name);
         animal.decreaseHungerLevel();
 
     }
 
-    public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity){
+
+    public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity) {
         System.out.println(this.name + "  " + recreationalActivity.name + " " + animal.name);
         animal.increaseSpiritLevel();
     }

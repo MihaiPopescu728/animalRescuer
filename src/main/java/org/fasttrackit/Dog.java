@@ -1,9 +1,13 @@
 package org.fasttrackit;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
 
     protected String race;
     protected int friendlinessLevel;
+
+    public Dog() {
+
+    }
 
     public Dog(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
                RecreationalActivity favoriteActivity, String idChip,
@@ -31,6 +35,10 @@ public class Dog extends Animal{
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 ", species='" + species + '\'' +
                 '}';
+    }
+
+    public void showHappiness() {
+        System.out.println("The dog is wiggling its tail");
     }
 
     public void setRace(String race) {
