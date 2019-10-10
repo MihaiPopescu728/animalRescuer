@@ -14,22 +14,6 @@ public class Dog extends Animal{
         this.friendlinessLevel = friendlinessLevel;
     }
 
-    public void setRace(String race) {
-        this.race = race;
-    }
-
-    public void setFriendlinessLevel(int friendlinessLevel) {
-        this.friendlinessLevel = friendlinessLevel;
-    }
-
-    public String getRace() {
-        return race;
-    }
-
-    public int getFriendlinessLevel() {
-        return friendlinessLevel;
-    }
-
     @Override
     public String toString() {
         return "Dog{" +
@@ -47,5 +31,21 @@ public class Dog extends Animal{
                 ", countryOfOrigin='" + countryOfOrigin + '\'' +
                 ", species='" + species + '\'' +
                 '}';
+    }
+
+    public void setRace(String race) {
+        this.race = race;
+    }
+
+    public void setFriendlinessLevel(int friendlinessLevel) {
+        this.friendlinessLevel = friendlinessLevel;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public int getFriendlinessLevel() {
+        return friendlinessLevel;
     }
 }

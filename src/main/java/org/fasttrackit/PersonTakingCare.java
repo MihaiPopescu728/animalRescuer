@@ -4,20 +4,11 @@ public class PersonTakingCare extends Adopter {
     protected int availability;
     protected String email;
 
-    public void setAvailability(int availability) {
+    public PersonTakingCare(String name, double moneySum, String personalNumericCode, String phoneNumber,
+                            String adress, int yearOfBirth, int availability, String email) {
+        super(name, moneySum, personalNumericCode, phoneNumber, adress, yearOfBirth);
         this.availability = availability;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getAvailability() {
-        return availability;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
     @Override
@@ -34,10 +25,19 @@ public class PersonTakingCare extends Adopter {
                 '}';
     }
 
-    public PersonTakingCare(String name, double moneySum, String personalNumericCode, String phoneNumber,
-                            String adress, int yearOfBirth, int availability, String email) {
-        super(name, moneySum, personalNumericCode, phoneNumber, adress, yearOfBirth);
+    public void setAvailability(int availability) {
         this.availability = availability;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getAvailability() {
+        return availability;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

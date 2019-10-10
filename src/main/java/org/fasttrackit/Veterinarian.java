@@ -8,6 +8,27 @@ public class Veterinarian {
     protected String phoneNumber;
     protected String rating;
 
+    public Veterinarian(String name, String specialization, String priceLevel, String adress, String phoneNumber, String rating) {
+        this.name = name;
+        this.specialization = specialization;
+        this.priceLevel = priceLevel;
+        this.adress = adress;
+        this.phoneNumber = phoneNumber;
+        this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "Veterinarian{" +
+                "name='" + name + '\'' +
+                ", specialization='" + specialization + '\'' +
+                ", priceLevel='" + priceLevel + '\'' +
+                ", adress='" + adress + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", rating='" + rating + '\'' +
+                '}';
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -54,26 +75,5 @@ public class Veterinarian {
 
     public String getRating() {
         return rating;
-    }
-
-    @Override
-    public String toString() {
-        return "Veterinarian{" +
-                "name='" + name + '\'' +
-                ", specialization='" + specialization + '\'' +
-                ", priceLevel='" + priceLevel + '\'' +
-                ", adress='" + adress + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", rating='" + rating + '\'' +
-                '}';
-    }
-
-    public Veterinarian(String name, String specialization, String priceLevel, String adress, String phoneNumber, String rating) {
-        this.name = name;
-        this.specialization = specialization;
-        this.priceLevel = priceLevel;
-        this.adress = adress;
-        this.phoneNumber = phoneNumber;
-        this.rating = rating;
     }
 }

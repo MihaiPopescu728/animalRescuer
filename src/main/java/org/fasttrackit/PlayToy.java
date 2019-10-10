@@ -4,29 +4,12 @@ public class PlayToy extends RecreationalActivity {
     protected int durability;
     protected int fatigueLevel;
 
-    public void setDurability(int durability) {
-        this.durability = durability;
-    }
-
-    public void setFatigueLevel(int fatigueLevel) {
-        this.fatigueLevel = fatigueLevel;
-    }
-
     public PlayToy(String name, String place, String dayOfWeek, String timeOfDay, String personName,
                    int durability, int fatigueLevel) {
         super(name, place, dayOfWeek, timeOfDay, personName);
         this.durability = durability;
         this.fatigueLevel = fatigueLevel;
     }
-
-    public int getDurability() {
-        return durability;
-    }
-
-    public int getFatigueLevel() {
-        return fatigueLevel;
-    }
-
     @Override
     public String toString() {
         return "Frisbee{" +
@@ -38,5 +21,21 @@ public class PlayToy extends RecreationalActivity {
                 ", timeOfDay='" + timeOfDay + '\'' +
                 ", personName='" + personName + '\'' +
                 '}';
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
+    public void setFatigueLevel(int fatigueLevel) {
+        this.fatigueLevel = fatigueLevel;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public int getFatigueLevel() {
+        return fatigueLevel;
     }
 }

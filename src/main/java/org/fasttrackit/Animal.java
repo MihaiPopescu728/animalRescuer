@@ -1,7 +1,7 @@
 package org.fasttrackit;
 
 public class Animal {
-       String name;
+       protected String name;
        protected int age;
        protected int healthLevel;
        protected int hungerLevel;
@@ -12,6 +12,40 @@ public class Animal {
        protected String favoriteToy;
        protected String countryOfOrigin;
        protected String species;
+
+
+    public Animal(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
+                  RecreationalActivity favoriteActivity, String idChip, String favoriteToy, String countryOfOrigin,
+                  String species) {
+        this.name = name;
+        this.age = age;
+        this.healthLevel = healthLevel;
+        this.hungerLevel = hungerLevel;
+        this.spiritLevel = spiritLevel;
+        this.favoriteFood = favoriteFood;
+        this.favoriteActivity = favoriteActivity;
+        this.idChip = idChip;
+        this.favoriteToy = favoriteToy;
+        this.countryOfOrigin = countryOfOrigin;
+        this.species = species;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", healthLevel=" + healthLevel +
+                ", hungerLevel=" + hungerLevel +
+                ", spiritLevel=" + spiritLevel +
+                ", favoriteFood=" + favoriteFood +
+                ", favoriteActivity=" + favoriteActivity +
+                ", idChip='" + idChip + '\'' +
+                ", favoriteToy='" + favoriteToy + '\'' +
+                ", countryOfOrigin='" + countryOfOrigin + '\'' +
+                ", species='" + species + '\'' +
+                '}';
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -101,43 +135,12 @@ public class Animal {
         return species;
     }
 
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", healthLevel=" + healthLevel +
-                ", hungerLevel=" + hungerLevel +
-                ", spiritLevel=" + spiritLevel +
-                ", favoriteFood=" + favoriteFood +
-                ", favoriteActivity=" + favoriteActivity +
-                ", idChip='" + idChip + '\'' +
-                ", favoriteToy='" + favoriteToy + '\'' +
-                ", countryOfOrigin='" + countryOfOrigin + '\'' +
-                ", species='" + species + '\'' +
-                '}';
-    }
+
     public void decreaseHungerLevel(){
         this.hungerLevel--;
     }
 
     public void increaseSpiritLevel(){
         this.spiritLevel++;
-    }
-
-    public Animal(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
-                  RecreationalActivity favoriteActivity, String idChip, String favoriteToy, String countryOfOrigin,
-                  String species) {
-        this.name = name;
-        this.age = age;
-        this.healthLevel = healthLevel;
-        this.hungerLevel = hungerLevel;
-        this.spiritLevel = spiritLevel;
-        this.favoriteFood = favoriteFood;
-        this.favoriteActivity = favoriteActivity;
-        this.idChip = idChip;
-        this.favoriteToy = favoriteToy;
-        this.countryOfOrigin = countryOfOrigin;
-        this.species = species;
     }
 }
