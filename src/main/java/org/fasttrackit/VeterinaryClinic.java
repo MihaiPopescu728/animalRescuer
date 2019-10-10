@@ -17,6 +17,14 @@ public class VeterinaryClinic {
         this.veterinarian1 = veterinarian1;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Veterinarian getVeterinarian1() {
+        return veterinarian1;
+    }
+
     @Override
     public String toString() {
         return "VeterinaryClinic{" +

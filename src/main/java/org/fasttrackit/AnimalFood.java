@@ -49,6 +49,42 @@ public class AnimalFood {
         this.lotNumber = lotNumber;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getQuantity() {
+        return quantity;
+    }
+
+    public LocalDate getExpirationDate() {
+        return expirationDate;
+    }
+
+    public boolean isAvailability() {
+        return availability;
+    }
+
+    public String getFlavour() {
+        return flavour;
+    }
+
+    public String getShape() {
+        return shape;
+    }
+
+    public int getDosage() {
+        return dosage;
+    }
+
+    public String getLotNumber() {
+        return lotNumber;
+    }
+
     @Override
     public String toString() {
         return "AnimalFood{" +

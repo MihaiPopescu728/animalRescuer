@@ -19,6 +19,14 @@ public class PlayToy extends RecreationalActivity {
         this.fatigueLevel = fatigueLevel;
     }
 
+    public int getDurability() {
+        return durability;
+    }
+
+    public int getFatigueLevel() {
+        return fatigueLevel;
+    }
+
     @Override
     public String toString() {
         return "Frisbee{" +

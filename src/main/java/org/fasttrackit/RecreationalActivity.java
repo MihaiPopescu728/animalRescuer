@@ -7,6 +7,46 @@ public class RecreationalActivity {
     protected String timeOfDay;
     protected String personName;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public void setDayOfWeek(String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+    }
+
+    public void setTimeOfDay(String timeOfDay) {
+        this.timeOfDay = timeOfDay;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public String getDayOfWeek() {
+        return dayOfWeek;
+    }
+
+    public String getTimeOfDay() {
+        return timeOfDay;
+    }
+
+    public String getPersonName() {
+        return personName;
+    }
+
     @Override
     public String toString() {
         return "RecreationalActivity{" +

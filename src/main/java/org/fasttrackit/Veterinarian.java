@@ -32,6 +32,30 @@ public class Veterinarian {
         this.rating = rating;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public String getPriceLevel() {
+        return priceLevel;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
     @Override
     public String toString() {
         return "Veterinarian{" +

@@ -12,6 +12,14 @@ public class PersonTakingCare extends Adopter {
         this.email = email;
     }
 
+    public int getAvailability() {
+        return availability;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     @Override
     public String toString() {
         return "PersonTakingCare{" +

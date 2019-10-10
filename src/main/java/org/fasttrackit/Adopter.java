@@ -16,6 +16,30 @@ public class Adopter {
         this.moneySum = moneySum;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public double getMoneySum() {
+        return moneySum;
+    }
+
+    public String getPersonalNumericCode() {
+        return personalNumericCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
     public void setPersonalNumericCode(String personalNumericCode) {
         this.personalNumericCode = personalNumericCode;
     }

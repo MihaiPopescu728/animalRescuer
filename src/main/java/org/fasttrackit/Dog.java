@@ -22,6 +22,14 @@ public class Dog extends Animal{
         this.friendlinessLevel = friendlinessLevel;
     }
 
+    public String getRace() {
+        return race;
+    }
+
+    public int getFriendlinessLevel() {
+        return friendlinessLevel;
+    }
+
     @Override
     public String toString() {
         return "Dog{" +

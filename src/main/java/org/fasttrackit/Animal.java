@@ -57,6 +57,50 @@ public class Animal {
         this.species = species;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getHealthLevel() {
+        return healthLevel;
+    }
+
+    public int getHungerLevel() {
+        return hungerLevel;
+    }
+
+    public int getSpiritLevel() {
+        return spiritLevel;
+    }
+
+    public AnimalFood getFavoriteFood() {
+        return favoriteFood;
+    }
+
+    public RecreationalActivity getFavoriteActivity() {
+        return favoriteActivity;
+    }
+
+    public String getIdChip() {
+        return idChip;
+    }
+
+    public String getFavoriteToy() {
+        return favoriteToy;
+    }
+
+    public String getCountryOfOrigin() {
+        return countryOfOrigin;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
     @Override
     public String toString() {
         return "Animal{" +
