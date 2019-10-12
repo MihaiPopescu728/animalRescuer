@@ -1,19 +1,19 @@
 package org.fasttrackit;
 
 public class Animal {
-       protected String name;
-       protected int age;
-       protected int healthLevel;
-       protected int hungerLevel;
-       protected int spiritLevel;
-       protected AnimalFood favoriteFood;
-       protected RecreationalActivity favoriteActivity;
-       protected String idChip;
-       protected String favoriteToy;
-       protected String countryOfOrigin;
-       protected String species;
+    protected String name;
+    protected int age;
+    protected int healthLevel;
+    protected int hungerLevel;
+    protected int spiritLevel;
+    protected AnimalFood favoriteFood;
+    protected RecreationalActivity favoriteActivity;
+    protected String idChip;
+    protected String favoriteToy;
+    protected String countryOfOrigin;
+    protected String species;
 
-    public Animal(){
+    public Animal() {
 
     }
 
@@ -50,7 +50,7 @@ public class Animal {
                 '}';
     }
 
-    public void showHappiness (){
+    public void showHappiness() {
         System.out.println("The animal is happy!");
     }
 
@@ -143,11 +143,11 @@ public class Animal {
     }
 
 
-    public void decreaseHungerLevel(){
+    public void decreaseHungerLevel() {
         this.hungerLevel--;
     }
 
-    public void increaseSpiritLevel(){
-        this.spiritLevel++;
+    public void increaseSpiritLevel(int number) {
+        this.spiritLevel += number;
     }
 }
