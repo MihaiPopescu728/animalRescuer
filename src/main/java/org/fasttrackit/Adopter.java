@@ -79,14 +79,14 @@ public class Adopter {
     }
 
     public void feed(Animal animal, AnimalFood food) {
-        System.out.println(this.name + " just gave some " + food.name + " to " + animal.name);
+        System.out.println(this.name + " just gave some " + food.getName() + " to " + animal.getName());
         animal.decreaseHungerLevel();
 
     }
 
 
     public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity) {
-        System.out.println(this.name + "  " + recreationalActivity.name + " " + animal.name);
+        System.out.println(this.name + "  " + recreationalActivity.getName() + " " + animal.getName());
         animal.increaseSpiritLevel();
     }
 }

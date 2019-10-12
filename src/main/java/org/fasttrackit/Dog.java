@@ -2,8 +2,8 @@ package org.fasttrackit;
 
 public class Dog extends Animal {
 
-    protected String race;
-    protected int friendlinessLevel;
+    private String race;
+    private int friendlinessLevel;
 
     public Dog() {
 

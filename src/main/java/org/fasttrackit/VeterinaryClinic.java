@@ -1,8 +1,8 @@
 package org.fasttrackit;
 
 public class VeterinaryClinic {
-    protected String name;
-    protected Veterinarian veterinarian1;
+    private String name;
+    private Veterinarian veterinarian1;
 
     public VeterinaryClinic(String name, Veterinarian veterinarian1) {
         this.name = name;

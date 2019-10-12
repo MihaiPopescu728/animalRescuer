@@ -1,8 +1,8 @@
 package org.fasttrackit;
 
 public class PersonTakingCare extends Adopter {
-    protected int availability;
-    protected String email;
+    private int availability;
+    private String email;
 
     public PersonTakingCare(String name, double moneySum, String personalNumericCode, String phoneNumber,
                             String adress, int yearOfBirth, int availability, String email) {

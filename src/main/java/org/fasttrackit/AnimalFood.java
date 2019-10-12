@@ -3,15 +3,15 @@ package org.fasttrackit;
 import java.time.LocalDate;
 
 public class AnimalFood {
-    protected String name;
+    private String name;
     protected double price;
-    protected double quantity;
-    protected LocalDate expirationDate;
-    protected boolean availability;
-    protected String flavour;
-    protected String shape;
-    protected int dosage;
-    protected String lotNumber;
+    private double quantity;
+    private LocalDate expirationDate;
+    private boolean availability;
+    private String flavour;
+    private String shape;
+    private int dosage;
+    private String lotNumber;
 
     public AnimalFood(String name, double price, double quantity, LocalDate expirationDate,
                       boolean availability, String flavour, String shape, int dosage, String lotNumber) {

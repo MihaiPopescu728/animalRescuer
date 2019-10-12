@@ -1,12 +1,12 @@
 package org.fasttrackit;
 
 public class Veterinarian {
-    protected String name;
-    protected String specialization;
-    protected String priceLevel;
-    protected String adress;
-    protected String phoneNumber;
-    protected String rating;
+    private String name;
+    private String specialization;
+    private String priceLevel;
+    private String adress;
+    private String phoneNumber;
+    private String rating;
 
     public Veterinarian(String name, String specialization, String priceLevel, String adress, String phoneNumber, String rating) {
         this.name = name;

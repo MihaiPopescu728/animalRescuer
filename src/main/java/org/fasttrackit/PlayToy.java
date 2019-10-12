@@ -1,8 +1,8 @@
 package org.fasttrackit;
 
 public class PlayToy extends RecreationalActivity {
-    protected int durability;
-    protected int fatigueLevel;
+    private int durability;
+    private int fatigueLevel;
 
     public PlayToy(String name, String place, String dayOfWeek, String timeOfDay, String personName,
                    int durability, int fatigueLevel) {
