@@ -59,12 +59,23 @@ public class App {
         Animal animall = new Animal();
         animall.showHappiness();
 
-        Dog dog2 = new Dog();
+        Animal dog2 = new Dog();
         dog2.showHappiness();
 
         System.out.println("---------------------------------------------------------------");
         adopter.doRecreationActivity(animal1, activity1);
         adopter.feed(animal1,animalFood1);
+
+        System.out.println("---------------------------------------------------------------");
+        Animal animal3 = new Animal();
+        Animal dog5 = new Dog();
+
+        animal3.showHappiness();
+        dog5.showHappiness();;
+
+
+
+
 
 
     }
