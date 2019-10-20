@@ -82,7 +82,7 @@ public class Adopter {
         System.out.println(this.name + " just gave some " + food.getName() + " to " + animal.getName());
         animal.decreaseHungerLevel();
         if (food.getName().equals(animal.getFavoriteFood().getName())) {
-            animal.increaseSpiritLevel(1);
+            animal.increaseSpiritLevel();
             System.out.println("Spirit level increased by 1: " + animal.getSpiritLevel());
         }
 
@@ -92,11 +92,12 @@ public class Adopter {
     public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity) {
         System.out.println(this.name + "  " + recreationalActivity.getName() + " " + animal.getName());
         if (animal.getFavoriteActivity().getName().equals(recreationalActivity.getName())) {
-            animal.increaseSpiritLevel(2);
-            System.out.println("Spirit level increased by 2: "+animal.getSpiritLevel());
+            animal.increaseSpiritLevel();
+            animal.increaseSpiritLevel();
+            System.out.println("Spirit level increased by 2: " + animal.getSpiritLevel());
         } else {
-            animal.increaseSpiritLevel(1);
-            System.out.println("Spirit level increased by 1: "+animal.getSpiritLevel());
+            animal.increaseSpiritLevel();
+            System.out.println("Spirit level increased by 1: " + animal.getSpiritLevel());
         }
     }
 }

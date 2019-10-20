@@ -147,7 +147,9 @@ public class Animal {
         this.hungerLevel--;
     }
 
-    public void increaseSpiritLevel(int number) {
-        this.spiritLevel += number;
+    public void increaseSpiritLevel() {
+        this.spiritLevel++;
     }
+
+
 }
