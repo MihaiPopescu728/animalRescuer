@@ -73,6 +73,6 @@ public class App {
         animal3.showHappiness();
         dog5.showHappiness();
 
-
+        game1.start();
     }
 }
