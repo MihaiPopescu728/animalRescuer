@@ -37,8 +37,9 @@ public class Dog extends Animal {
                 '}';
     }
 
-    public void showHappiness() {
-        System.out.println("The dog is wiggling its tail");
+    @Override
+    public void showHappiness(String name) {
+        System.out.println("The dog " + name + " is wiggling its tail");
     }
 
     public void setRace(String race) {

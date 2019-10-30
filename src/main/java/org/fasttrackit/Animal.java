@@ -50,8 +50,9 @@ public class Animal {
                 '}';
     }
 
-    public void showHappiness() {
-        System.out.println("The animal is happy!");
+
+    public void showHappiness (String name){
+        System.out.println("The animal " + name + " is happy");
     }
 
     public void setName(String name) {
