@@ -9,61 +9,18 @@ public class Game {
     private Animal animal;
     private Veterinarian veterinarian;
     private List<AnimalFood> availableFood = new ArrayList();
-    private RecreationalActivity[] availableActivities = new RecreationalActivity[10];
+    private RecreationalActivity[] availableActivities = new RecreationalActivity[2];
 
-
-    public List<AnimalFood> getAvailableFood() {
-        return availableFood;
-    }
-
-    public void setAvailableFood(List<AnimalFood> availableFood) {
-        this.availableFood = availableFood;
-    }
-
-    public RecreationalActivity[] getAvailableActivities() {
-        return availableActivities;
-    }
-
-    public void setAvailableActivities(RecreationalActivity[] availableActivities) {
-        this.availableActivities = availableActivities;
+    public void start() {
+        initFood();
+        initActivities();
+        showAvailableFood();
+        showAvailableActivities();
     }
 
     public Game(Adopter adopter, Animal animal, Veterinarian veterinarian) {
         this.adopter = adopter;
         this.animal = animal;
-        this.veterinarian = veterinarian;
-    }
-
-    @Override
-    public String toString() {
-        return "Game{" +
-                "adopter=" + adopter +
-                ", animal=" + animal +
-                ", veterinarian=" + veterinarian +
-                '}';
-    }
-
-    public Adopter getAdopter() {
-        return adopter;
-    }
-
-    public Animal getAnimal() {
-        return animal;
-    }
-
-    public Veterinarian getVeterinarian() {
-        return veterinarian;
-    }
-
-    public void setAdopter(Adopter adopter) {
-        this.adopter = adopter;
-    }
-
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
-    }
-
-    public void setVeterinarian(Veterinarian veterinarian) {
         this.veterinarian = veterinarian;
     }
 
@@ -75,7 +32,7 @@ public class Game {
                 9, 26), true, "beef", "cube", 2, "1FS1");
         availableFood.add(animalFood1);
 
-        getAvailableFood().add(animalFood2);
+        availableFood.add(animalFood2);
     }
 
     private void initActivities() {
@@ -87,12 +44,6 @@ public class Game {
         availableActivities[1] = recreationalActivity2;
     }
 
-    public void start() {
-        initFood();
-        initActivities();
-        showAvailableFood();
-        showAvailableActivities();
-    }
 
     public void showAvailableFood() {
         System.out.println("Available food: ");
