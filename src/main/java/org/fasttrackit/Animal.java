@@ -51,8 +51,8 @@ public class Animal {
     }
 
 
-    public void showHappiness (String name){
-        System.out.println("The animal " + name + " is happy");
+    public void showHappiness() {
+        System.out.println(getName() + " is happy");
     }
 
     public void setName(String name) {

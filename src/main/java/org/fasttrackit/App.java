@@ -57,11 +57,10 @@ public class App {
         System.out.println("---------------------------------------------------------------");
 
         Animal animall = new Animal();
-        animall.showHappiness(animal1.getName());
+        animall.showHappiness();
 
         Animal dog2 = new Dog();
-        dog1.showHappiness(dog1.getName());
-
+        dog1.showHappiness();
 
         System.out.println("---------------------------------------------------------------");
         adopter.doRecreationActivity(animal1, activity1);
@@ -71,7 +70,7 @@ public class App {
         Animal animal3 = new Animal();
         Animal dog5 = new Dog();
 
-        animal1.showHappiness(animal1.getName());
+        animal1.showHappiness();
         game1.start();
     }
 }
