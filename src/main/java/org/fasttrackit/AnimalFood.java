@@ -26,6 +26,10 @@ public class AnimalFood {
         this.lotNumber = lotNumber;
     }
 
+    public AnimalFood(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "AnimalFood{" +

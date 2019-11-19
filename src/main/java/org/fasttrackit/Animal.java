@@ -17,6 +17,10 @@ public class Animal {
 
     }
 
+    public Animal(String name) {
+        this.name = name;
+    }
+
     public Animal(String name, int age, int healthLevel, int hungerLevel, int spiritLevel, AnimalFood favoriteFood,
                   RecreationalActivity favoriteActivity, String idChip, String favoriteToy, String countryOfOrigin,
                   String species) {

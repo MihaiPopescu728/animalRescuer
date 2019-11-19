@@ -71,6 +71,12 @@ public class App {
         Animal dog5 = new Dog();
 
         animal1.showHappiness();
-        game1.start();
+        //game1.start();
+
+
+        Game newGame = new Game();
+        newGame.start();
+
+        //System.out.println(newGame.getAnimal());
     }
 }

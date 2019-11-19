@@ -37,6 +37,11 @@ public class Dog extends Animal {
                 '}';
     }
 
+    public Dog(String name) {
+        super();
+        this.name = name;
+    }
+
     @Override
     public void showHappiness() {
         System.out.println(getName() + " is wiggling its tail");

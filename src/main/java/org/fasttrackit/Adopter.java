@@ -78,9 +78,14 @@ public class Adopter {
         this.yearOfBirth = yearOfBirth;
     }
 
+    public Adopter() {
+
+    }
+
     public void feed(Animal animal, AnimalFood food) {
         System.out.println(this.name + " just gave some " + food.getName() + " to " + animal.getName());
         animal.decreaseHungerLevel();
+        System.out.println("Hunger level decreased by 1" + " : " + animal.getHungerLevel());
         if (food.getName().equals(animal.getFavoriteFood().getName())) {
             animal.increaseSpiritLevel();
             System.out.println("Spirit level increased by 1: " + animal.getSpiritLevel());
@@ -90,7 +95,7 @@ public class Adopter {
 
 
     public void doRecreationActivity(Animal animal, RecreationalActivity recreationalActivity) {
-        System.out.println(this.name + "  " + recreationalActivity.getName() + " " + animal.getName());
+        System.out.println(this.name + " " + recreationalActivity.getName() + " with " + animal.getName());
         if (animal.getFavoriteActivity().getName().equals(recreationalActivity.getName())) {
             animal.increaseSpiritLevel();
             animal.increaseSpiritLevel();
