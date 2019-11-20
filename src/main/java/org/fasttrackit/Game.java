@@ -16,7 +16,10 @@ public class Game {
         showAvailableFood();
         showAvailableActivities();
 
-        initAnimal();
+
+        if (!initAnimal()) {
+            return;
+        }
         initRescuer();
         nameAnimal();
         animal.setHungerLevel(10);
@@ -25,6 +28,7 @@ public class Game {
         int rounds = 10;
         boolean won = false;
         for (int i = 0; i < rounds; i++) {
+            System.out.println("YOU HAVE " + (rounds - i) + " ROUNDS REMAINING ");
             requireFeeding();
             requirePlaying();
             System.out.println("*****************************");
@@ -57,9 +61,6 @@ public class Game {
         System.out.println("Enter index of food. Enter X  if you don't want to feed");
         Scanner sc = new Scanner(System.in);
         String food = sc.nextLine();
-
-        System.out.println(adopter);
-        System.out.println(animal);
         if (food.toLowerCase().equals("x")) {
             System.out.println("The animal wasn't fed");
             return;
@@ -128,12 +129,15 @@ public class Game {
 
     }
 
-    private void initAnimal() {
+    private boolean initAnimal() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input animal species: ");
+        System.out.println("Input animal type: ");
         String species = scanner.nextLine();
         if (species.toLowerCase().equals("dog")) {
             animal = new Dog();
+        } else {
+            System.out.println("Type doesn't exist ");
+            return false;
         }
 
         animal.setAge(3);
@@ -148,7 +152,7 @@ public class Game {
         animal.setSpecies("dog");
         ((Dog) animal).setRace("pitbull");
         ((Dog) animal).setFriendlinessLevel(5);
-
+        return true;
 
     }
 
