@@ -17,15 +17,13 @@ public class Game {
         showAvailableActivities();
 
 
-        if (!initAnimal()) {
-            return;
-        }
+        initAnimal();
         initRescuer();
         nameAnimal();
-        animal.setHungerLevel(10);
-        animal.setSpiritLevel(1);
+        animal.setHungerLevel(5);
+        animal.setSpiritLevel(5);
 
-        int rounds = 10;
+        int rounds = 5;
         boolean won = false;
         for (int i = 0; i < rounds; i++) {
             System.out.println("YOU HAVE " + (rounds - i) + " ROUNDS REMAINING ");
@@ -58,54 +56,52 @@ public class Game {
             System.out.println(i + 1 + " " + availableFood.get(i).getName());
 
         }
-        System.out.println("Enter index of food. Enter X  if you don't want to feed");
-        Scanner sc = new Scanner(System.in);
-        String food = sc.nextLine();
-        if (food.toLowerCase().equals("x")) {
-            System.out.println("The animal wasn't fed");
-            return;
-        }
-        Map<Integer, AnimalFood> foodMap = new HashMap<>();
-        for (int i = 0; i < availableFood.size(); i++) {
-            foodMap.put(i + 1, availableFood.get(i));
-        }
-        try {
-            AnimalFood chosenFood = foodMap.get(Integer.parseInt(food));
-            adopter.feed(animal, chosenFood);
-        } catch (Exception e) {
-            System.out.println("Invalid index");
-        }
+        boolean ok = false;
+        while (!ok) {
+            System.out.println("Choose from available food: ");
+            Scanner sc = new Scanner(System.in);
+            String choice = sc.nextLine();
+            if (choice.toLowerCase().equals("x")) {
+                System.out.println("The animal wasn't fed");
+                return;
 
-
+            }
+            try {
+                AnimalFood chosenFood = availableFood.get(Integer.parseInt(choice) - 1);
+                adopter.feed(animal, chosenFood);
+                ok = true;
+            } catch (Exception e) {
+                System.out.println("Invalid index");
+            }
+        }
     }
+
 
     private void requirePlaying() {
         for (int i = 0; i < availableActivities.length; i++) {
             System.out.println(i + 1 + " " + availableActivities[i].getName());
 
         }
-        System.out.println("Enter index of activity. Enter X  if you don't want to play");
-        Scanner sc = new Scanner(System.in);
-        String activity = sc.nextLine();
+        boolean ok = false;
+        while (!ok) {
+            System.out.println("Choose from available activities: ");
+            Scanner sc = new Scanner(System.in);
+            String choice = sc.nextLine();
+            if (choice.toLowerCase().equals("x")) {
+                System.out.println("You haven't played with the animal");
+                return;
 
-        System.out.println(adopter);
-        System.out.println(animal);
-        if (activity.toLowerCase().equals("x")) {
-            System.out.println("The adopter hasn't played with the animal");
-            return;
+            }
+            try {
+                RecreationalActivity recreationalActivity = availableActivities[Integer.parseInt(choice) - 1];
+                adopter.doRecreationActivity(animal, recreationalActivity);
+                ok = true;
+            } catch (Exception e) {
+                System.out.println("Invalid index");
+            }
         }
-        Map<Integer, RecreationalActivity> activityMap = new HashMap<>();
-        for (int i = 0; i < availableActivities.length; i++) {
-            activityMap.put(i + 1, availableActivities[i]);
-        }
-        try {
-            RecreationalActivity recreationalActivity = activityMap.get(Integer.parseInt(activity));
-            adopter.doRecreationActivity(animal, recreationalActivity);
-        } catch (Exception e) {
-            System.out.println("Invalid index");
-        }
-
     }
+
 
     public Game(Adopter adopter, Animal animal, Veterinarian veterinarian) {
         this.adopter = adopter;
@@ -121,7 +117,7 @@ public class Game {
         while (ok == false) {
             System.out.println("Input valid name of adopter: ");
             name = sc.nextLine();
-            if (name.matches("[a-zA-Z]+")) {
+            if (StringHandler.isValidName(name)) {
                 ok = true;
             }
         }
@@ -129,37 +125,58 @@ public class Game {
 
     }
 
-    private boolean initAnimal() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input animal type: ");
-        String species = scanner.nextLine();
-        if (species.toLowerCase().equals("dog")) {
-            animal = new Dog();
-        } else {
-            System.out.println("Type doesn't exist ");
-            return false;
+    private void initAnimal() {
+
+        boolean ok = false;
+        while (!ok) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Input animal type: (1 for dog, 2 for cat)");
+            String species = scanner.nextLine();
+            if (species.toLowerCase().equals("1")) {
+                animal = new Dog();
+                ok = true;
+                animal.setAge(3);
+                animal.setCountryOfOrigin("United Kingdom");
+                animal.setFavoriteActivity(new RecreationalActivity("running"));
+                animal.setFavoriteFood(new AnimalFood("Purina"));
+                animal.setFavoriteToy("frisbee");
+                animal.setIdChip("ABC4R3");
+                animal.setHealthLevel(5);
+                animal.setHungerLevel(2);
+                animal.setSpiritLevel(8);
+                animal.setSpecies("dog");
+            } else if (species.equals("2")) {
+                animal = new Cat();
+                ok = true;
+                animal.setAge(2);
+                animal.setCountryOfOrigin("Italy");
+                animal.setFavoriteActivity(new RecreationalActivity("playing with ball"));
+                animal.setFavoriteFood(new AnimalFood("Wiskas"));
+                animal.setFavoriteToy("ball");
+                animal.setIdChip("NFDSFNJ2");
+                animal.setHealthLevel(6);
+                animal.setHungerLevel(4);
+                animal.setSpiritLevel(4);
+                animal.setSpecies("cat");
+            } else {
+                System.out.println("Please select from available animals: ");
+            }
+
+
         }
-
-        animal.setAge(3);
-        animal.setCountryOfOrigin("United Kingdom");
-        animal.setFavoriteActivity(new RecreationalActivity("running"));
-        animal.setFavoriteFood(new AnimalFood("Purina"));
-        animal.setFavoriteToy("frisbee");
-        animal.setIdChip("ABC4R3");
-        animal.setHealthLevel(5);
-        animal.setHungerLevel(2);
-        animal.setSpiritLevel(8);
-        animal.setSpecies("dog");
-        ((Dog) animal).setRace("pitbull");
-        ((Dog) animal).setFriendlinessLevel(5);
-        return true;
-
     }
 
     private void nameAnimal() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Input animal name: ");
-        String name = sc.next();
+        String name = null;
+        boolean ok = false;
+        while (ok == false) {
+            System.out.println("Input valid name of animal: ");
+            name = sc.nextLine();
+            if (StringHandler.isValidName(name)) {
+                ok = true;
+            }
+        }
         animal.setName(name);
     }
 
@@ -173,6 +190,7 @@ public class Game {
                 "1E321");
         AnimalFood animalFood2 = new AnimalFood("Chapee", 15, 10, LocalDate.of(2020,
                 9, 26), true, "beef", "cube", 2, "1FS1");
+
         availableFood.add(animalFood1);
 
         availableFood.add(animalFood2);
